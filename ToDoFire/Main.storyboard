@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDoFire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Fk6-kS-JO2">
-                                <rect key="frame" x="40" y="253" width="334" height="400"/>
+                                <rect key="frame" x="40" y="227" width="310" height="400"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jm4-Bx-A16">
-                                        <rect key="frame" x="57.333333333333329" y="0.0" width="219.33333333333337" height="110"/>
+                                        <rect key="frame" x="45.333333333333329" y="0.0" width="219.33333333333337" height="110"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO DO FIRE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKm-b0-M0j">
                                                 <rect key="frame" x="0.0" y="0.0" width="219.33333333333334" height="46.666666666666664"/>
@@ -37,15 +37,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="H7U-AU-LB5">
-                                        <rect key="frame" x="0.0" y="170" width="334" height="83"/>
+                                        <rect key="frame" x="0.0" y="170" width="310" height="83"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LC8-cL-IeE">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="34"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rgY-5i-GKr">
-                                                <rect key="frame" x="0.0" y="49" width="334" height="34"/>
+                                                <rect key="frame" x="0.0" y="49" width="310" height="34"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
@@ -58,10 +60,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A2y-Ly-QWc">
-                                        <rect key="frame" x="40" y="313" width="254" height="87"/>
+                                        <rect key="frame" x="40" y="313" width="230" height="87"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-Ec-ASE">
-                                                <rect key="frame" x="0.0" y="0.0" width="254" height="39.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="39.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -70,11 +72,10 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="soZ-0h-DOv"/>
-                                                    <segue destination="U0e-w2-a9z" kind="show" identifier="tasksSegue" id="ZTh-dD-hTk"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2O-NF-Wb4">
-                                                <rect key="frame" x="0.0" y="49.666666666666629" width="254" height="37.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="49.666666666666629" width="230" height="37.333333333333343"/>
                                                 <color key="backgroundColor" red="0.70080079510000004" green="0.85244295729999997" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -116,6 +117,7 @@
                         <outlet property="emailTextField" destination="LC8-cL-IeE" id="xlv-lO-Vr5"/>
                         <outlet property="passwordTextField" destination="rgY-5i-GKr" id="M2P-Ua-1FB"/>
                         <outlet property="warnLabel" destination="2RL-QJ-HSj" id="nam-Cr-lHn"/>
+                        <segue destination="U0e-w2-a9z" kind="show" identifier="tasksSegue" id="rF3-Cp-djc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,19 +129,19 @@
             <objects>
                 <viewController id="ONf-tM-KSa" customClass="TasksViewController" customModule="ToDoFire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="brc-29-xse">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bnw-GA-8WS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                                 <color key="backgroundColor" red="0.70080079510000004" green="0.85244295729999997" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.70080079510000004" green="0.85244295729999997" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ZSt-hY-Rcf">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZSt-hY-Rcf" id="er3-dP-TdO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -160,6 +162,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="Crj-8S-ikw">
+                        <barButtonItem key="leftBarButtonItem" title="SingOut" id="11c-hE-LWZ">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="signOutTapped:" destination="ONf-tM-KSa" id="KiK-sA-dNN"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Txo-3S-sqh">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
@@ -182,7 +190,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="7eg-li-08q"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bh4-pJ-o5M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="35"/>
@@ -199,6 +207,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
