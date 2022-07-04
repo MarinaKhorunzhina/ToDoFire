@@ -81,7 +81,7 @@ class LoginViewController: UIViewController {
             }
             
             if user != nil {
-                self?.performSegue(withIdentifier: "tasksSegue", sender: nil)
+                self?.performSegue(withIdentifier: self!.segueIdentifier, sender: nil)
                 return
                 
             }
