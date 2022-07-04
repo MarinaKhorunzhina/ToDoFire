@@ -9,21 +9,22 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
+    
     let segueIdentifier = "tasksSegue"
+    var ref: DatabaseReference!
+    
     @IBOutlet weak var warnLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        emailTextField.text = ""
-        passwordTextField.text = ""
-    }
+   
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        ref = Database.database().reference(withPath: "users")
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIResponder.keyboardDidHideNotification, object: nil)
         warnLabel.alpha = 0
@@ -35,7 +36,12 @@ class LoginViewController: UIViewController {
         })
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
     @objc func kbDidShow(notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
         let kbFrameSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -91,21 +97,21 @@ class LoginViewController: UIViewController {
             return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+        Auth.auth().createUser(withEmail: email, password: password, completion: { [weak self] (authResult, error) in
 
-            if error == nil {
-                if user != nil {
-                    
-                } else {
-                    print("user is not created")
-                }
-            } else {
+            guard error == nil, let user = authResult?.user else {
+                
                 print(error!.localizedDescription)
+                return
             }
             
+            let userRef = self?.ref.child(user.uid)
+            userRef?.setValue(user.email, forKey: "email")
+          
         })
     }
-
 }
+
+
 
 
